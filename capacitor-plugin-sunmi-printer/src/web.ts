@@ -14,14 +14,58 @@ export class SunmiPrinterWeb extends WebPlugin implements SunmiPrinterPlugin {
     return options;
   }
 
-  async discoverPrinters(filter: string): Promise<{ results: any[] }> {
-    console.log('filter: ', filter);
+  async discoverPrinters(): Promise<{ results: any[] }> {
     return {
       results: [{
-        firstName: 'Dummy',
-        lastName: 'Entry',
-        telephone: '123456'
+        name: 'Dummy',
+        address: '123456'
       }]
+    };
+  }
+
+  async connectPrinter(address: string): Promise<{ results: boolean }> {
+    console.log(address);
+    return {
+      results: true
+    };
+  }
+
+  async disconnectPrinter(): Promise<{ results: boolean }> {
+    return {
+      results: true
+    };
+  }
+
+  async printString(contents: string, is_bold: boolean, is_underline: boolean): Promise<{ results: boolean }> {
+    console.log("contents");
+    console.log(contents);
+
+    console.log("is_bold");
+    console.log(is_bold);
+
+    console.log("is_underline");
+    console.log(is_underline);
+
+    return {
+      results: true
+    };
+  }
+
+  async printBarcode(barcode: string): Promise<{ results: boolean }> {
+    console.log("barcode");
+    console.log(barcode);
+
+    return {
+      results: true
+    };
+  }
+
+  async printCommand(command: string): Promise<{ results: boolean }> {
+    console.log("command");
+    console.log(command);
+
+    return {
+      results: true
     };
   }
 }
