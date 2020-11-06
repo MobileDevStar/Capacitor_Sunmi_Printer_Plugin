@@ -25,8 +25,8 @@ public class BluetoothUtil {
     private static final UUID PRINTER_UUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
     //private static final UUID PRINTER_UUID = UUID.fromString("00001112-0000-1000-8000-00805f9b34fb");
 
-    //private static final String Innerprinter_Address = "00:11:22:33:44:55";
-    private static final String Innerprinter_Address = "A0:82:1F:64:93:49";
+    private static final String Innerprinter_Address = "00:11:22:33:44:55";
+    //private static final String Innerprinter_Address = "A0:82:1F:64:93:49";
 
     public static boolean isBlueToothPrinter = false;
 

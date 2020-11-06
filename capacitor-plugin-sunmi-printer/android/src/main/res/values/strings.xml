@@ -5,7 +5,7 @@
     <string name="toast_2">The service has been disconnected!</string>
     <string name="toast_3">Bluetooth device is unavailable</string>
     <string name="toast_4">Bluetooth device not detected. Please open Bluetooth!</string>
-    <string name="toast_5">Not Found InnterPrinter!</string>
+    <string name="toast_5">Not Found Printer!</string>
     <string name="toast_6">Bluetooth connect failed!</string>
     <string name="toast_7"> Only a single Qr code is printed for the AIDL mode</string>
     <string name="toast_8">Now QrCode size must be less than 7!</string>

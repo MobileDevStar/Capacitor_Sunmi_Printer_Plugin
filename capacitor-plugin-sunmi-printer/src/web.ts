@@ -23,8 +23,9 @@ export class SunmiPrinterWeb extends WebPlugin implements SunmiPrinterPlugin {
     };
   }
 
-  async connectPrinter(address: string): Promise<{ results: boolean }> {
-    console.log(address);
+  async connectPrinter(options: {address: string}): Promise<{ results: boolean }> {
+    console.log("options");
+    console.log(options);
     return {
       results: true
     };
@@ -36,33 +37,27 @@ export class SunmiPrinterWeb extends WebPlugin implements SunmiPrinterPlugin {
     };
   }
 
-  async printString(contents: string, is_bold: boolean, is_underline: boolean): Promise<{ results: boolean }> {
-    console.log("contents");
-    console.log(contents);
+  async printString( options: { contents: string, is_bold: boolean, is_underline: boolean } ): Promise<{ results: boolean }> {
+    console.log("options");
+    console.log(options);
+    
+    return {
+      results: true
+    };
+  }
 
-    console.log("is_bold");
-    console.log(is_bold);
-
-    console.log("is_underline");
-    console.log(is_underline);
+  async printBarcode(options: {barcode: string }): Promise<{ results: boolean }> {
+    console.log("options");
+    console.log(options);
 
     return {
       results: true
     };
   }
 
-  async printBarcode(barcode: string): Promise<{ results: boolean }> {
-    console.log("barcode");
-    console.log(barcode);
-
-    return {
-      results: true
-    };
-  }
-
-  async printCommand(command: string): Promise<{ results: boolean }> {
-    console.log("command");
-    console.log(command);
+  async printCommand(options: {command: string}): Promise<{ results: boolean }> {
+    console.log("options");
+    console.log(options);
 
     return {
       results: true

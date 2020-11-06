@@ -25,7 +25,16 @@ import static com.rebelity.plugins.sunmiprinter.Define.*;
         requestCodes={SunmiPrinter.REQUEST_BLUETOOTH}
 )
 public class SunmiPrinter extends Plugin {
-    protected static final int REQUEST_BLUETOOTH = 199002; // Unique request code
+    protected static final int REQUEST_BLUETOOTH = 1990; // Unique request code
+
+    /**
+     * Called when the plugin has been connected to the bridge
+     * and is ready to start initializing.
+     */
+    @Override
+    public void load() {
+        new SettingUtil();
+    }
 
     @PluginMethod
     public void echo(PluginCall call) {
@@ -45,6 +54,7 @@ public class SunmiPrinter extends Plugin {
     @PluginMethod()
     public void connectPrinter(PluginCall call) {
         String address = call.getString("address");
+        Log.d("address", address);
 
         BluetoothUtil.disconnectBlueTooth(getContext());
 
