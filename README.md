@@ -4,7 +4,7 @@ This is a capacitor plugin to use sunmi printer
 ---
 
 ## Installation
-1. Download or clone the source form Gitbub
+1. Download or clone the source from Gitbub
 
 2. Install package via npm from local of the source:
 
