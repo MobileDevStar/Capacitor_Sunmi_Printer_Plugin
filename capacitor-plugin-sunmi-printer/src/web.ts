@@ -17,8 +17,11 @@ export class SunmiPrinterWeb extends WebPlugin implements SunmiPrinterPlugin {
   async discoverPrinters(): Promise<{ results: any[] }> {
     return {
       results: [{
-        name: 'Dummy',
+        name: 'Dummy1',
         address: '123456'
+      },{
+        name: 'Dummy2',
+        address: '456789'
       }]
     };
   }
