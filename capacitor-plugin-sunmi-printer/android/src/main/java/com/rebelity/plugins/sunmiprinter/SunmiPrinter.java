@@ -134,6 +134,15 @@ public class SunmiPrinter extends Plugin {
         call.success(ret);
     }
 
+    @PluginMethod()
+    public void openCashRegister(PluginCall call) {
+        BluetoothUtil.sendData(ESCUtil.openCasheDrawer());
+
+        JSObject ret = new JSObject();
+        ret.put("results", true);
+        call.success(ret);
+    }
+
     @Override
     protected void handleRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.handleRequestPermissionsResult(requestCode, permissions, grantResults);

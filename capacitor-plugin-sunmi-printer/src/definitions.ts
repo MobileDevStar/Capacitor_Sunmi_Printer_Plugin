@@ -12,4 +12,5 @@ export interface SunmiPrinterPlugin {
   printString(options: {contents: string, is_bold: boolean, is_underline: boolean}): Promise<{results: boolean}>;
   printBarcode(options: {barcode: string}): Promise<{results: boolean}>;
   printCommand(options: {command: string}): Promise<{results: boolean}>;
+  openCashRegister(): Promise<{results: boolean}>;
 }

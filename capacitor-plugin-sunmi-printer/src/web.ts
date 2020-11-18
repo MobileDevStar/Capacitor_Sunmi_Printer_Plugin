@@ -66,6 +66,12 @@ export class SunmiPrinterWeb extends WebPlugin implements SunmiPrinterPlugin {
       results: true
     };
   }
+
+  async openCashRegister(): Promise<{ results: boolean }> {
+    return {
+      results: true
+    };
+  }
 }
 
 const SunmiPrinter = new SunmiPrinterWeb();
